@@ -1,0 +1,67 @@
+Define array separators = [‘ ‘, ‘.’, ‘,’]
+
+
+Define boolean state = true
+
+
+Method int countWords(String input) {
+
+
+
+state = true
+
+
+int word_count = 0
+
+int i = 0 //This is just a variable that we use to scan through text
+
+
+
+For (int i = 0, i < input.length, i++) {
+
+
+
+If (SeparatorArrayContains(input.elementAt(i) or input.elementAt(i) == ‘new_line’ or input.elementAt(i) == ‘new_tab’) {
+
+state = true
+
+}
+
+
+
+Else if (state == true) {
+
+state = false
+
+word_count = word_count + 1
+
+}
+
+}
+
+
+
+return word_count
+
+}
+Method Boolean SeparatorArrayContains(elementToCheck) {
+
+boolean found = false; //We set the default result to false
+
+
+
+for (int k = 0; k < separators.length; k++) {
+
+
+
+if (separators[k] == elementToCheck) {
+
+found = true;
+
+}
+
+}
+
+return found; //Once we have scanned through the entire array, return the result
+
+}
